@@ -6,7 +6,7 @@ import md5 from 'md5'
 
 const initialState = {}
 
-function reducer (state, action) {
+function reducer(state, action) {
   if (action.type === 'SET_DATA') {
     window.localStorage.setItem('fileSystem', JSON.stringify(action.value))
     return action.value
@@ -99,7 +99,7 @@ function reducer (state, action) {
   // }
 }
 
-function useCollection () {
+function useCollection() {
   const {
     setCurrentView,
     setReload, reload,
@@ -157,7 +157,6 @@ function useCollection () {
   useEffect(() => {
     gettingCollections()
       .then((res) => {
-        // console.log('gettingCollections :', res)
         const collections = res.user.collections
 
         setData(res.user)

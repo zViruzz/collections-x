@@ -1,7 +1,8 @@
 import Menu from '../../components/Menu/Menu'
 import { getAuth } from 'firebase/auth'
+import logo from '../../assets/logo.svg'
 
-function HeaderCollection ({ setData }) {
+function HeaderCollection({ setData }) {
   const auth = getAuth()
   const user = auth.currentUser
 
@@ -18,9 +19,9 @@ function HeaderCollection ({ setData }) {
         </div>
         <div className='flex items-center flex-shrink-0'>
           <img
-            className='h-9'
-            src='https://tailwindui.com/img/logos/workflow-mark-indigo-500.svg'
-            alt='Workflow'
+            className='h-8 w-auto'
+            src={logo}
+            alt='logo'
           />
         </div>
         <Menu setData={setData} />

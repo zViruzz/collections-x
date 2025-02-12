@@ -1,19 +1,19 @@
 import { Link } from 'react-router-dom'
 import useLogin from '../../hooks/useLogin'
+import logo from '../../assets/logo.svg'
 
-function Home () {
+function Home() {
   const { isLogin } = useLogin()
 
   return (
     <div className='grid grid-cols-1  justify-between min-h-screen w-screen'>
-      {/* Header */}
       <header className='h-min'>
         <nav className='flex items-center justify-between max-w-7xl mx-auto px-3 py-3 sm:px-6 lg:px-8'>
           <div className='flex items-center flex-shrink-0 gap-3'>
             <img
               className='h-8 w-auto'
-              src='https://tailwindui.com/img/logos/workflow-mark-indigo-500.svg'
-              alt='Workflow'
+              src={logo}
+              alt='logo'
             />
             <h2 className='text-sm text-inherit font-bold'>Collections X</h2>
           </div>
@@ -31,7 +31,6 @@ function Home () {
         </nav>
       </header>
 
-      {/* Contenido de la página */}
       <main className='flex items-center justify-center h-full'>
 
         <div className='h-full flex flex-col gap-10'>
@@ -47,8 +46,6 @@ function Home () {
         </div>
 
       </main>
-
-      {/* Footer */}
 
     </div>
   )
